@@ -1,18 +1,30 @@
-
-
-import LocomotiveScroll from 'locomotive-scroll';
-
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true
+$(document).ready(function() {
+    setInterval(window.onload = function(){
+        let way1 = document.getElementById("way1-1");
+        let way2 = document.getElementById("way2-1");
+        way1.addEventListener("mouseover", function (event) {
+            way1.classList.add('active-way')
+            way2.classList.remove('active-way');
+        }, false);
+        way2.addEventListener("mouseover", function (event) {
+            way2.classList.add('active-way')
+            way1.classList.remove('active-way');
+        }, false);
+    });
 });
-
-const slider= document.querySelector('#main-2');
-
-var scrollToHere = slider.offsetTop;
-
-$('.link').on('click', function() {
-    bodyScrollBar.scrollTo(0, scrollToHere, 1000);
+$(document).ready(function() {
+    setInterval(window.onload = function(){
+        let way1 = document.getElementById("way1");
+        let way2 = document.getElementById("way2");
+        way1.addEventListener("mouseover", function (event) {
+            way1.classList.add('active-way-1')
+            way2.classList.remove('active-way-1');
+        }, false);
+        way2.addEventListener("mouseover", function (event) {
+            way2.classList.add('active-way-1')
+            way1.classList.remove('active-way-1');
+        }, false);
+    });
 });
 
 
