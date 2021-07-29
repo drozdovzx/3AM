@@ -4,6 +4,8 @@
     font-size: 15px;
     line-height: 1.6;
     color: #333333;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
 .page{
     margin: 0;
@@ -161,7 +163,6 @@
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-
 }
 .intro{
     position: relative;
@@ -315,6 +316,80 @@
     display: flex;
     flex-direction: row;
 }
+
+/*____Two ways____*/
+.two-ways{
+    display: flex;
+    background-color: #ffecd1;
+}
+.two-ways-sub{
+    /*background-color: #f5cbad;
+    height: 90vh;
+    width: 95vw;*/
+    margin: auto auto;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-around;*/
+
+}
+.way{
+    position: relative;
+    height: auto;
+    max-width: 500px;
+    max-height: 800px;
+    transition: background-color .4s linear;
+    transition: transform .2s linear;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0.8) !important;
+
+}
+.way a{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+.way span{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+}
+.way img{
+    max-width: 350px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.gray-scale{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.5);
+    position: absolute;
+    z-index: 1000;
+    transition: background .2s linear;
+}
+.active-way{
+    background-color: rgba(128, 128, 128, 0);
+    transition: background .2s linear;
+}
+.active-way-1{
+    transform: scale(1) !important;
+    transition: transform .2s linear;
+
+}
+
+
+/*
+.active-way .gray-scale{
+    background-color: rgba(128, 128, 128, 0);
+    z-index: 1000;
+}
+ */
 
 /*____Our team____*/
 .tam{
