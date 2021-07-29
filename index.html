@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/locomotive-scroll.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
-
     <link rel="stylesheet" href="css/test.css">
 
     <!--FONTS-->
@@ -18,10 +15,8 @@
 
     <title>3AM_Bakery</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="scripts/scripts.js"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
     <script src="scripts/locomotive-scroll.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery.pagepiling.min.js"></script>
-    <script type="text/javascript" src="scripts/jquery.pagepiling.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
 </head>
 
@@ -29,6 +24,7 @@
 
 
 <div class="o-scroll back" id="js-scroll pagepiling" data-scroll-container="" style="background-color: rgb(201, 212, 208);">
+
     <section id="myHeader page1" class="header" data-scroll-section>
         <a class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
             <svg class="logo-img" id="_061116_d7ecf4_копия_9" data-name="#061116 + d7ecf4 копия 9"
@@ -127,16 +123,16 @@
         </div>
     </section>
 
-    <section class="intro size" id="page1" data-scroll-section >
+    <section class="intro size" data-scroll-section >
         <div class="intro-text">
             <span>3AM <br> Cookies</span>
         </div>
-        <button class="shop">
+        <button class="shop" data-scroll data-scroll-offset="10%">
             <span>Order now</span>
         </button>
     </section>
 
-    <section class="about size" id="page2" data-scroll-section>
+    <section class="about size" data-scroll-section data-scroll-sticky>
         <div style="width: 80vw; display: flex; flex-direction: row; margin: auto;" data-scroll
              data-scroll-direction="horizontal" data-scroll-speed="-2">
             <div class="text-about" >
@@ -145,12 +141,11 @@
                     lifestyle. Vegan, healthy, paleo, sugar-free, gluten-free, low-calorie or just traditional cookies,
                     all of that you can find here.</h2>
             </div>
-            <img src="images/cookies-2.jpg">
+            <img src="images/cookies-2.jpg" alt="cookies-2">
         </div>
     </section>
 
-
-    <section class="contact size" id="page3" data-scroll-section>
+    <section class="contact size" data-scroll-section data-scroll-target>
         <div class="flex-row">
             <div class="map-interactive">
                 <div class="mapouter">
@@ -173,8 +168,31 @@
             </div>
         </div>
     </section>
+    <section class="two-ways size" data-scroll-section>
+        <div class="two-ways-sub" data-scroll
+             data-scroll-direction="horizontal" data-scroll-speed="2">
+            <div class="way active-way-1" id="way1">
+                <div class="gray-scale active-way" id="way1-1"></div>
+                <img src="images/ava.jpg">
+                <a>First way</a>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet asperiores
+                    at blanditiis cumque deserunt ex excepturi fugiat fugit inventore minima neque nostrum
+                    obcaecati possimus quos, ratione similique veritatis voluptatum.</span>
+            </div>
+            <div style="width: 150px"></div>
+            <div class="way" id="way2">
+                <div class="gray-scale" id="way2-1"></div>
+                <img src="images/ava.jpg">
+                <a>Second way</a>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet asperiores
+                    at blanditiis cumque deserunt ex excepturi fugiat fugit inventore minima neque nostrum
+                    obcaecati possimus quos, ratione similique veritatis voluptatum.</span>
+            </div>
 
-    <section class="tam size" id="page4" data-scroll-section>
+        </div>
+    </section>
+
+    <section class="tam size" data-scroll-section>
         <span class="our-team">OUR TEAM</span>
         <div class="team-cont" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">
             <div class="team" id="tom">
@@ -206,7 +224,7 @@
 
     </section>
 
-    <section class="footer" id="page7" data-scroll-section>
+    <section class="footer" data-scroll-section>
         <button class="soc-link"
                 onclick="window.open('https://www.instagram.com/cookie_tallinn/', '_blank'); return false;">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
@@ -233,11 +251,6 @@
 </div>
 
 <script>
-    $(document).ready(function() {
-        $('#pagepiling').pagepiling();
-    });
-</script>
-<script>
 
     const scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
@@ -246,4 +259,18 @@
 
 </script>
 </body>
+<script>
+
+    let way1 = document.getElementById("way1");
+    let way2 = document.getElementById("way2");
+    way1.addEventListener("mouseover", function (event) {
+        way1.classList.add('active-way')
+        way2.classList.remove('active-way');
+    }, false);
+    way2.addEventListener("mouseover", function (event) {
+        way2.classList.add('active-way')
+        way1.classList.remove('active-way');
+    }, false);
+
+</script>
 </html>
