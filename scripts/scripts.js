@@ -27,23 +27,93 @@ $(document).ready(function() {
     });
 });
 
-
-window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("myHeader");
-var logo = document.getElementsByClassName("logo-img")[0];
-var sticky = header.offsetTop;
-
-function myFunction() {
-    if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-        logo.classList.add("logo-img-small");
-    } else {
-        header.classList.remove("sticky");
-        logo.classList.remove("logo-img-small");
-    }
+function changeNavColor(a, b, c, d, e){
+    Array.from(a).forEach(
+        function(element, index, array  ) {
+            element.style.color="b"
+            e.style.height = "c";
+        }
+    );
+    Array.from(d).forEach(
+        function(element, index, array  ) {
+            element.style.fill="white";
+        }
+    );
 }
+window.onscroll = function(ev) {
+    var nav = document.getElementsByClassName("nav-link");
+    var el1 = document.getElementById("sec-one");
+    var el2 = document.getElementById("sec-two");
+    var el3 = document.getElementById("sec-three");
+    var el4 = document.getElementById("sec-four");
+    var el5 = document.getElementById("sec-five");
+    var navmain = document.getElementById("myHeader");
+    var logo = document.getElementsByClassName("col-chng");
 
-AOS.init({
-    duration: 1200,
-})
+    if (window.scrollY >= el1.offsetTop) {
+        Array.from(nav).forEach(
+            function(element, index, array  ) {
+                element.style.color="white"
+                navmain.style.height = "15%";
+            }
+        );
+        Array.from(logo).forEach(
+            function(element, index, array  ) {
+                element.style.fill="white";
+            }
+        );
+    }
+    if (window.scrollY >= el2.offsetTop) {
+        Array.from(nav).forEach(
+            function(element, index, array  ) {
+                element.style.color="#b87709";
+                navmain.style.height = "10%";
+            }
+        );
+        Array.from(logo).forEach(
+            function(element, index, array  ) {
+                element.style.fill="#b87709";
+            }
+        );
+    }
+    if (window.scrollY >= el3.offsetTop) {
+        Array.from(nav).forEach(
+            function(element, index, array  ) {
+                element.style.color="white";
+                navmain.style.height = "10%";
+            }
+        );
+        Array.from(logo).forEach(
+            function(element, index, array  ) {
+                element.style.fill="white";
+            }
+        );
+    }
+    if (window.scrollY >= el4.offsetTop) {
+        Array.from(nav).forEach(
+            function(element, index, array  ) {
+                element.style.color="#b87709";
+                navmain.style.height = "10%";
+            }
+        );
+        Array.from(logo).forEach(
+            function(element, index, array  ) {
+                element.style.fill="#b87709";
+            }
+        );
+    }
+    if (window.scrollY >= el5.offsetTop) {
+        Array.from(nav).forEach(
+            function(element, index, array  ) {
+                element.style.color="#b87709";
+                navmain.style.height = "10%";
+            }
+        );
+        Array.from(logo).forEach(
+            function(element, index, array  ) {
+                element.style.fill="#b87709";
+            }
+        );
+    }
+
+};
