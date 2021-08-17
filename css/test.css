@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'PlaylistScript';
+    src: url('../fonts/PlaylistScript.eot');
+    src: local('☺'), url('../fonts/PlaylistScript.woff') format('woff'), url('../fonts/PlaylistScript.ttf') format('truetype'), url('../fonts/PlaylistScript.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html{
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+}
+
 
 .body{
     font-family: 'Montserrat', sans-serif;
@@ -13,13 +25,9 @@
 }
 .header{
     position: fixed;
-    width: 100%;
     top: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
     z-index: 90;
-    height: 15%;
-    /*background-color: #f8cc9dd9;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,6 +36,7 @@
 .size{
     height: 100vh;
     width: 100%;
+    scroll-snap-align: center;
 }
 .sticky{
     height: 8%;
@@ -186,12 +195,9 @@
     padding-bottom: 20px;
     padding-top: 10px;
 }
-.intro-text span{
-    font-family: 'Kaushan Script', cursive;
-    text-align: center;
-    font-weight: bold;
-    font-size: 65px;
-    color: #ffffff;
+.intro-text svg{
+    height: 100%;
+    width: 100%;
 }
 .shop{
     z-index: 3;
@@ -396,14 +402,13 @@
     display: flex;
     flex-direction: row;
     background-color: white;
+    position: relative;
   }
 .team{
-    position: absolute;
     width: 200px;
     height: auto;
 }
 .team-cont{
-    padding-top:40px;
     flex:1;
 }
 .team img{
@@ -430,21 +435,21 @@
     font-size: 40px;
     font-weight: normal;
 }
-#tom{
-    top: 10%;
-    left: 22%;
+#tom {
+    margin-top: 31%;
+    margin-left: 29%;
 }
-#sass{
-    top: 13%;
-    right: 29%;
+#sass {
+    margin-top: 27%;
+    margin-left: 34%;
 }
-#fara{
-    bottom: 14%;
-    left: 33%;
+#fara {
+    margin-top: 74%;
+    margin-left: 34%;
 }
-#mark{
-    bottom: 12%;
-    right: 29%;
+#mark {
+    margin-top: 87%;
+    margin-left: 25%;
 }
 
 /*____Footer____*/
