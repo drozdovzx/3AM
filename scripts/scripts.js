@@ -32,7 +32,7 @@ if (window.scrollY > 20px) {
         navmain.style.height = "10%";
 }
 else{
-    navmain.style.height = "10%";
+    navmain.style.height = "15%";
 }
 
 
