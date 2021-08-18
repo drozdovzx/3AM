@@ -59,7 +59,7 @@ html{
     text-transform: uppercase;
 }
 .nav-link{
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     transition: color .2s linear;
     font-family: 'Montserrat', sans-serif;
