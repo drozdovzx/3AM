@@ -27,12 +27,14 @@ $(document).ready(function() {
     });
 });
 
-var navmain = document.getElementById("myHeader");
-if (window.scrollY > 30) {
-        navmain.style.height = "10%";
-}
-else{
-    navmain.style.height = "15%";
+window.onscroll = function(ev) {
+    var navmain = document.getElementById("myHeader");
+    if (window.scrollY > 30) {
+            navmain.style.height = "10%";
+    }
+    else{
+        navmain.style.height = "15%";
+    }
 }
 
 
