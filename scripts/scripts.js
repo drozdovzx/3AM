@@ -26,7 +26,7 @@ $(document).ready(function() {
         }, false);
     });
 });
-
+/*
 function changeNavColor(a, b, c, d, e){
     Array.from(a).forEach(
         function(element, index, array  ) {
@@ -117,3 +117,4 @@ window.onscroll = function(ev) {
     }
 
 };
+*/
