@@ -10,7 +10,7 @@ html{
     overflow: auto;
 }
 .col-chng{
-    fill: black;
+    fill: black !important;
 }
 
 .body{
