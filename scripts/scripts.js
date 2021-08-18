@@ -26,6 +26,16 @@ $(document).ready(function() {
         }, false);
     });
 });
+
+var navmain = document.getElementById("myHeader");
+if (window.scrollY > 20px) {
+        navmain.style.height = "10%";
+}
+else{
+    navmain.style.height = "10%";
+}
+
+
 /*
 function changeNavColor(a, b, c, d, e){
     Array.from(a).forEach(
