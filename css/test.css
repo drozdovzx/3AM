@@ -210,12 +210,13 @@ html{
     border: #ffecd1;
     border-radius: 100px;
     outline: none;
-    box-shadow: 4px 10px 10px rgba(118, 118, 118, 0.57);
+    /*box-shadow: 4px 10px 10px rgba(118, 118, 118, 0.57);*/
 }
 .shop:hover{
-    box-shadow: 1px 2px 10px rgba(78, 78, 78, 0.57);
+    /*box-shadow: 1px 2px 10px rgba(78, 78, 78, 0.57);*/
     background-color: #ffecd1;
     transition: .3s;
+    transform: scale(1.05)
 }
 .shop:not(:hover){
     background-color: white;
