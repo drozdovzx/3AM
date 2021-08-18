@@ -26,7 +26,7 @@ $(document).ready(function() {
         }, false);
     });
 });
-
+/*
 window.onscroll = function(ev) {
     var navmain = document.getElementById("myHeader");
     if (window.scrollY > 30) {
@@ -36,7 +36,7 @@ window.onscroll = function(ev) {
         navmain.style.height = "15%";
     }
 }
-
+*/
 
 /*
 function changeNavColor(a, b, c, d, e){
