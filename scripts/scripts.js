@@ -28,7 +28,7 @@ $(document).ready(function() {
 });
 
 var navmain = document.getElementById("myHeader");
-if (window.scrollY > 20px) {
+if (window.scrollY > 30) {
         navmain.style.height = "10%";
 }
 else{
