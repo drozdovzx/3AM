@@ -43,7 +43,7 @@ function menuItems(){
         Array.from(navItems).forEach(
             function(element, index, array  ) {
                 element.style.transform = 'translateY(' + a + 'px)';
-                a -= 65;
+                a -= 110;
             }
         );
         checkMenu = true;
@@ -52,7 +52,7 @@ function menuItems(){
 function menuStrips() {
     var nav = document.getElementById("nav-main");
     if (checkMenu) {
-        nav.style.transform = "translateX(110px)";
+        nav.style.transform = "translateX(200px)";
         setTimeout(() => {
             menuItems();
         }, 200);
@@ -60,7 +60,7 @@ function menuStrips() {
     else {
         menuItems();
         setTimeout(() => {
-            nav.style.transform = "translateX(-84px)";
+            nav.style.transform = "translateX(-200px)";
         }, 200);
     }
 }
