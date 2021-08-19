@@ -26,6 +26,45 @@ $(document).ready(function() {
         }, false);
     });
 });
+var checkMenu = true
+
+function menuItems(){
+    var navItems = document.getElementsByClassName("nav-link");
+    if (checkMenu){
+    Array.from(navItems).forEach(
+        function(element, index, array  ) {
+            element.style.transform = 'translateY(0px)';
+            checkMenu = false;
+        }
+    )
+    }
+    else {
+        var a = 0;
+        Array.from(navItems).forEach(
+            function(element, index, array  ) {
+                element.style.transform = 'translateY(' + a + 'px)';
+                a -= 65;
+            }
+        );
+        checkMenu = true;
+    }
+}
+function menuStrips() {
+    var nav = document.getElementById("nav-main");
+    if (checkMenu) {
+        nav.style.transform = "translateX(110px)";
+        setTimeout(() => {
+            menuItems();
+        }, 200);
+    }
+    else {
+        menuItems();
+        setTimeout(() => {
+            nav.style.transform = "translateX(-84px)";
+        }, 200);
+    }
+}
+
 /*
 window.onscroll = function(ev) {
     var navmain = document.getElementById("myHeader");
