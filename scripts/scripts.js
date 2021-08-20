@@ -26,42 +26,61 @@ $(document).ready(function() {
         }, false);
     });
 });
-var checkMenu = true
+var checkMenu = true;
+var scroll = true;
 
-function menuItems(){
+/*
+function menuItems(a) {
     var navItems = document.getElementsByClassName("nav-link");
-    if (checkMenu){
-    Array.from(navItems).forEach(
-        function(element, index, array  ) {
-            element.style.transform = 'translateY(0px)';
-            checkMenu = false;
-        }
-    )
-    }
-    else {
-        var a = 0;
+    if (checkMenu) {
         Array.from(navItems).forEach(
-            function(element, index, array  ) {
+            function (element, index, array) {
+                element.style.transform = 'translateY(' + a + 'px)';
+            }
+        )
+    } else {
+        Array.from(navItems).forEach(
+            function (element, index, array) {
                 element.style.transform = 'translateY(' + a + 'px)';
                 a -= 110;
             }
         );
-        checkMenu = true;
+    }
+}*/
+function menu(a, b) {
+        var nav = document.getElementById("nav-main");
+        nav.style.transform = "translateY(" + a + b + ")";
+}
+function menuStrip(a){
+    var strip = document.getElementById("white-back");
+    strip.style.transform = "translateX(" + a + "vw)";
+}
+function checkColor(a){
+    var logo = document.getElementById("logo");
+    var menuBtn = document.getElementById("menu-btn");
+    if (scroll){
+        logo.style.filter = "invert(" + a + ")";
+        menuBtn.style.filter = "invert(" + a + ")";
     }
 }
 function menuStrips() {
-    var nav = document.getElementById("nav-main");
     if (checkMenu) {
-        nav.style.transform = "translateX(200px)";
-        setTimeout(() => {
-            menuItems();
+        menuStrip(0);
+        checkColor(1);
+        setTimeout(function(){
+            menu(16, "vw");
         }, 200);
+        checkMenu = false;
     }
     else {
-        menuItems();
-        setTimeout(() => {
-            nav.style.transform = "translateX(-200px)";
-        }, 200);
+        menu(-100, "%");
+        setTimeout(function(){
+            menuStrip(-100);
+        }, 400);
+        setTimeout(function(){
+            checkColor(0);
+        }, 400);
+        checkMenu = true;
     }
 }
 
