@@ -99,6 +99,9 @@ html{
 .nav-link:hover{
     color: #b87709;
 }
+#white-back{
+    display: none;
+}
 
 
 /*langchange*/
@@ -491,8 +494,32 @@ button.soc-link:not(:hover) {
 
 
 @media only screen and (max-width: 1080px) {
-    .logo, .lang-change {
+    .lang-change {
         display: none;
+    }
+    #white-back{
+        z-index: 7;
+        width: 100vw;
+        height: 16vw;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        transform: translateX(-100vw);
+        transition: .2s;
+
+    }
+    .logo{
+        z-index: 100;
+        right: 0;
+        left: auto;
+        top: 0;
+        width: 16vw;
+        height: 16vw;
+    }
+    .col-chng{
+        fill: white !important;
     }
     .intro-text svg{
         height: 100%;
@@ -511,26 +538,25 @@ button.soc-link:not(:hover) {
         position: absolute;
         left: 0;
         top: 0;
-        transform: translateX(-200px);
-        transition: .2s;
+        transform: translateY(-100%);
+        transition: .4s;
+        width: 100vw;
     }
     .header{
         background-color: rgba(255, 255, 255, 0);
     }
     .menu-btn-img{
-        height: 100px;
-        width: 100px;
-        margin: 30px;
+        height: 60%;
+        width: 60%;
     }
     .menu-btn {
         position: absolute;
         left: 0;
         top: 0;
         cursor: pointer;
-        z-index: 7;
-        background-color: white;
-        width: 200px;
-        height: 200px;
+        z-index: 100;
+        width: 16vw;
+        height: 16vw;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -542,6 +568,7 @@ button.soc-link:not(:hover) {
         padding: 10px 20px;
         font-size: 60px;
     }
+    /*
     #nav-1{
         z-index: 6;
     }
@@ -560,8 +587,5 @@ button.soc-link:not(:hover) {
     #nav-5{
         transform: translateY(-440px);
         z-index: 2;
-    }
-}
-@media only screen and (max-width: 1080px) {
-
+    }*/
 }
