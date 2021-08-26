@@ -329,6 +329,50 @@ html{
     flex-direction: row;
 }
 
+.img-container{
+    position: relative;
+    top: 31vw;
+}
+.active{
+    transform: translateY(-50%);
+    left: 0;
+    filter: grayscale(0) brightness(100%);
+    width: 64.43vw;
+    height: 36.241875vw;
+    z-index: 20;
+    transition: all .25s linear;
+    position: absolute;
+    margin-left: 3vw;
+}
+.next{
+    width: 48vw;
+    height: 27vw;
+    left: 45.3125vw;
+    transform: translateY(-50%);
+    filter: grayscale(1) brightness(20%);
+    z-index: 10;
+}
+img{
+    max-width: 50vw;
+}
+.btn-container{
+    width: 100px;
+}
+.btn-both{
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+.btn-left{
+    content: "<";
+}
+.btn-right{
+    content: ">";
+}
+
 /*____Two ways____*/
 .two-ways{
     display: flex;
@@ -409,7 +453,7 @@ html{
     flex-direction: row;
     background-color: white;
     position: relative;
-  }
+}
 .team{
     width: 200px;
     height: auto;
