@@ -18,7 +18,12 @@
 </head>
 
 <body class="page">
-
+<div class="preloader">
+    <div class="preloader__row">
+        <div class="preloader__item"></div>
+        <div class="preloader__item"></div>
+    </div>
+</div>
 
 <div class="back">
 
@@ -181,23 +186,56 @@
 
     <section class="contact size" id="sec-three">
         <div class="active1">
-            <img src="images/pechenje3-20.jpg">
+            <img alt="Cookie1" rel="preload" src="images/pechenje3-01.jpg">
         </div>
         <div class="active1 next">
-            <img src="images/pechenje3-01.jpg">
+            <img alt="Cookie2" rel="preload" src="images/pechenje3-20.jpg">
         </div>
         <div class="active1 out">
-            <img src="images/pechenje3-19.jpg">
+            <img alt="Cookie3" rel="preload" src="images/pechenje3-12.jpg">
         </div>
         <div class="active1 out">
-            <img src="images/pechenje3-21.jpg">
+            <img alt="Cookie4" rel="preload" src="images/pechenje3-19.jpg">
+        </div>
+
+        <div class="active2 text-down">
+            <h1>First cookie</h1>
+            <span>
+                Loren ipsum blalbalbalblabl adbldabfa asdgv safdv
+                asdv asdf sdaf sdfas a sdafasdvcasd va asdfg asdf
+                asdafasdfsda asd fasd sadf asdf
+            </span>
+        </div>
+        <div class="active2">
+            <h1>Second cookie</h1>
+            <span>
+                Loren ipsum blalbalbalblabl adbldabfa asdgv safdv
+                asdv asdf sdaf sdfas a sdafasdvcasd va asdfg asdf
+                asdafasdfsda asd fasd sadf asdf
+            </span>
+        </div>
+        <div class="active2">
+            <h1>Third cookie</h1>
+            <span>
+                Loren ipsum blalbalbalblabl adbldabfa asdgv safdv
+                asdv asdf sdaf sdfas a sdafasdvcasd va asdfg asdf
+                asdafasdfsda asd fasd sadf asdf
+            </span>
+        </div>
+        <div class="active2">
+            <h1>Four cookie</h1>
+            <span>
+                Loren ipsum blalbalbalblabl adbldabfa asdgv safdv
+                asdv asdf sdaf sdfas a sdafasdvcasd va asdfg asdf
+                asdafasdfsda asd fasd sadf asdf
+            </span>
         </div>
 
         <div class="btn-container">
-            <button class="btn-left btn-both" onclick="imgRight(-1, 0);">
+            <button class="btn-left btn-both" onclick="slides(-1, 0, 1, 1);">
                 <span>&#10094;</span>
             </button>
-            <button class="btn-right btn-both" onclick="imgRight(1, 0);">
+            <button class="btn-right btn-both" onclick="slides(1, 0, 2, 1);">
                 <span>&#10095;</span>
             </button>
         </div>
@@ -311,6 +349,12 @@
 </div>
 </body>
 <script>
-
+    window.onload = function () {
+        document.body.classList.add('loaded_hiding');
+        window.setTimeout(function () {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('loaded_hiding');
+        }, 500);
+    }
 </script>
 </html>
