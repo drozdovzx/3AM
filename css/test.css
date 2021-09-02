@@ -353,6 +353,7 @@ html{
     left: -100%;*/
     transform: translate(calc(-100% - 10vw), calc(50vh - 50%));
     transition: all .9s;
+    z-index: 1;
 }
 img{
     max-width: 50vw;
