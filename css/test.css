@@ -330,13 +330,11 @@ html{
     flex-direction: row;
 }
 
-.img-container{
-    position: relative;
-    top: 31vw;
-}
+
+/*____Listener___*/
 .active1{
     position: absolute;
-    transition: all .9s;
+    transition-duration: .9s;
     /*left: 5vw;
     top: 50vh;*/
     z-index: 20;
@@ -346,13 +344,13 @@ html{
     transform: translate(85%, calc(50vh - 50%)) scale(0.9);
     filter: grayscale(1) brightness(20%);
     z-index: 10;
-    transition: all .9s;
+    transition-duration: .9s;
 }
 .out{
     /*top: 50vh;
     left: -100%;*/
     transform: translate(calc(-100% - 10vw), calc(50vh - 50%));
-    transition: all .9s;
+    transition-duration: .9s;
     z-index: 1;
 }
 img{
@@ -388,13 +386,13 @@ img{
     top: -10vh;
     transform: translateY(-50%);
     visibility: hidden;
-    transition: all .6s;
+    transition-duration: .9s;
 
 }
 .text-down{
     visibility: visible;
     transform: translateY(calc(50vh - 50%));
-    transition: all .6s;
+    transition-duration: .9s;
 
 }
 
@@ -548,7 +546,6 @@ img{
     background: #e0e0e0;
     /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
     z-index: 1001;
-    display:none;
 }
 
 .preloader__row {
@@ -560,18 +557,20 @@ img{
     margin-top: -35px;
     margin-left: -35px;
     text-align: center;
-    animation: preloader-rotate 2s infinite linear;
+}
+.preloader1{
+    animation: preloader-rotate1 2s infinite linear;
+}
+.preloader2{
+    animation: preloader-rotate2 2s infinite linear;
 }
 
 .preloader__item {
     position: absolute;
-    display: inline-block;
     top: 0;
-    background-color: #337ab7;
     border-radius: 100%;
-    width: 35px;
-    height: 35px;
-    animation: preloader-bounce 2s infinite ease-in-out;
+    width: 100%;
+    height: 100%;
 }
 
 .preloader__item:last-child {
@@ -580,13 +579,25 @@ img{
     animation-delay: -1s;
 }
 
-@keyframes preloader-rotate {
+@keyframes preloader-rotate1 {
     100% {
         transform: rotate(360deg);
     }
 }
-
-@keyframes preloader-bounce {
+@keyframes preloader-rotate2 {
+    100% {
+        transform-origin: 40% 50%;
+        transform: rotate(-360deg);
+    }
+}
+@keyframes preloader1-1 {
+    100% {
+        transform-origin: 55% 50%;
+        transform: rotate(360deg);
+    }
+}
+/*
+@keyframes preloader-rotate1 {
 
     0%,
     100% {
@@ -596,7 +607,7 @@ img{
     50% {
         transform: scale(1);
     }
-}
+}*/
 
 .loaded_hiding .preloader {
     transition: 0.3s opacity;
@@ -604,7 +615,7 @@ img{
 }
 
 .loaded .preloader {
-    display: none;
+    display:none;
 }
 
 
