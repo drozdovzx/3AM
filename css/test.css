@@ -336,22 +336,23 @@ html{
 }
 .active1{
     position: absolute;
-    transition: all .9s linear;
-    left: 5vw;
-    top: 50vh;
+    transition: all .9s;
+    /*left: 5vw;
+    top: 50vh;*/
     z-index: 20;
-    transform: translate(0, -50%);
+    transform: translate(4vw, 50%);
 }
 .next{
     transform: translate(85%, -50%) scale(0.9);
     filter: grayscale(1) brightness(20%);
     z-index: 10;
-    transition: all .6s;
+    transition: all .9s;
 }
 .out{
-    top: 50vh;
-    /*left: -100%;*/
+    /*top: 50vh;
+    left: -100%;*/
     transform: translate(calc(-100% - 10vw), -50%);
+    transition: all .9s;
 }
 img{
     max-width: 50vw;
@@ -391,7 +392,7 @@ img{
 }
 .text-down{
     visibility: visible;
-    top: 50vh;
+    transform: translateY(calc(50vh - 50%));
     transition: all .6s;
 
 }
