@@ -336,7 +336,7 @@ html{
 }
 .active1{
     position: absolute;
-    transition: all .6s linear;
+    transition: all .9s linear;
     left: 5vw;
     top: 50vh;
     z-index: 20;
