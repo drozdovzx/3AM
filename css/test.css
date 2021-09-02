@@ -343,7 +343,7 @@ html{
     transform: translate(4vw, 50%);
 }
 .next{
-    transform: translate(85%, -50%) scale(0.9);
+    transform: translate(85%, 50%) scale(0.9);
     filter: grayscale(1) brightness(20%);
     z-index: 10;
     transition: all .9s;
@@ -351,7 +351,7 @@ html{
 .out{
     /*top: 50vh;
     left: -100%;*/
-    transform: translate(calc(-100% - 10vw), -50%);
+    transform: translate(calc(-100% - 10vw), 50%);
     transition: all .9s;
 }
 img{
