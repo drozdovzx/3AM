@@ -35,8 +35,7 @@ var scroll = true;
 
 var slideIndex = [1,1];
 var slideId = ["active1", "active2"]
-rightSlides(1, 0);
-rightSlides(1, 1);
+
 
 function slides(n, p, r, m) {
     if (r === 1){
@@ -52,23 +51,20 @@ function leftSlides(n, p, m) {
     var x = document.getElementsByClassName(slideId[p]);
     var y = document.getElementsByClassName(slideId[m]);
     for (i = 0; i < x.length; i++) {
-        x[i].classList.add("out");
-        x[i].classList.remove("next");
-        y[i].classList.remove("text-down");
+        x[i].className = "active1 out";
+        y[i].className = "active2";
     }
     if (1 < n < (x.length+1)) {a = 1;}
     if (n < 1) {slideIndex[p] = x.length; a = 2;}
     if (slideIndex[p] >= 0 && a === 1){
-        x[slideIndex[p]-1].classList.remove("out");
-        x[slideIndex[p]].classList.remove("out");
-        x[slideIndex[p]].classList.add("next");
-        y[slideIndex[p]-1].classList.add("text-down");
+        x[slideIndex[p]-1].className = "active1";
+        x[slideIndex[p]].className = "active1 next";
+        y[slideIndex[p]-1].className = "active2 text-down";
     }
     if (slideIndex[p] === x.length && a === 2){
-        x[slideIndex[p]-1].classList.remove("out");
-        x[0].classList.remove("out");
-        x[0].classList.add("next");
-        y[slideIndex[p]-1].classList.add("text-down");
+        x[slideIndex[p]-1].className = "active1";
+        x[0].className = "active1 next";
+        y[slideIndex[p]-1].className = "active2 text-down";
     }
 }
 function rightSlides(n, p, m) {
@@ -77,24 +73,20 @@ function rightSlides(n, p, m) {
     var x = document.getElementsByClassName(slideId[p]);
     var y = document.getElementsByClassName(slideId[m]);
     for (i = 0; i < x.length; i++) {
-        x[i].classList.remove("next");
-        x[i].classList.add("out");
-        y[i].classList.remove("text-down");
+        x[i].className = "active1 out";
+        y[i].className = "active2";
     }
     if (n > x.length) {slideIndex[p] = 1; a = 1;}
     if (0 < n < (x.length+1)) {a = 1;}
-    if (n < 1) {slideIndex[p] = x.length; a = 2;}
     if (slideIndex[p] !== x.length && a === 1){
-        x[slideIndex[p]-1].classList.remove("out");
-        x[slideIndex[p]].classList.remove("out");
-        x[slideIndex[p]].classList.add("next");
-        y[slideIndex[p]-1].classList.add("text-down");
+        x[slideIndex[p]-1].className = "active1";
+        x[slideIndex[p]].className = "active1 next";
+        y[slideIndex[p]-1].className = "active2 text-down";
     }
     if (slideIndex[p] === x.length && a === 1){
-        x[slideIndex[p]-1].classList.remove("out");
-        x[0].classList.remove("out");
-        x[0].classList.add("next");
-        y[slideIndex[p]-1].classList.add("text-down");
+        x[slideIndex[p]-1].className = "active1";
+        x[0].className = "active1 next";
+        y[slideIndex[p]-1].className = "active2 text-down";
 
     }
 }
