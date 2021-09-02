@@ -350,7 +350,8 @@ html{
 }
 .out{
     top: 50vh;
-    left: -100%;
+    /*left: -100%;*/
+    transform: translate(calc(-100% - 10vw), -50%);
 }
 img{
     max-width: 50vw;
