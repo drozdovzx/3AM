@@ -1,7 +1,6 @@
-window.onload = function () {
-    document.body.classList.add('loaded');
-}
-
+$(window).on("load", function (){
+    $(".preloader").fadeOut(500)
+});
 $(document).ready(function() {
     setInterval(window.onload = function(){
         let way1 = document.getElementById("way1-1");
