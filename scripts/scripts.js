@@ -109,8 +109,8 @@ function menuItems(a) {
     }
 }*/
 function menu(a, b) {
-        var nav = document.getElementById("nav-main");
-        nav.style.transform = "translateY(" + a + b + ")";
+    var nav = document.getElementById("nav-main");
+    nav.style.transform = "translateY(" + a + b + ")";
 }
 function menuStrip(a){
     var strip = document.getElementById("white-back");
