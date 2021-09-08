@@ -431,8 +431,8 @@ img{
 .way{
     position: relative;
     height: auto;
-    max-width: 500px;
-    max-height: 800px;
+    max-width: 600px;
+    max-height: 900px;
     transition: background-color .4s linear;
     transition: transform .2s linear;
     display: flex;
