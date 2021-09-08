@@ -110,7 +110,7 @@ html{
     top: 0;
     position: absolute;
     right: 0;
-    height: auto;
+    height: 100%;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -127,7 +127,7 @@ html{
     border-radius: 50px;
 }
 .lang-change:hover .lang-change-window{
-    transform: translateY(0px);
+    transform: translateY(80px);
     transition: .2s;
 }
 .lang-change:not(:hover) .lang-change-window{
@@ -142,6 +142,7 @@ html{
 .lang-change-flex{
     height: 80px;
     width: 80px;
+    position: absolute;
     margin: auto auto;
     display: flex;
     flex-direction: row;
@@ -244,6 +245,12 @@ html{
 .about img{
     object-fit: scale-down;
     width: 40%;
+}
+.about-con{
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
 }
 .text-about{
     width: 40%;
@@ -364,18 +371,27 @@ img{
     position: absolute;
 }
 .btn-both{
-    background-color: white;
-    color: black;
-    border-radius: 10px;
-    /*width: 20px;
-    height: 20px;*/
-    text-align: center;
+    background-color: #777777a1;
+    color: #d6d6d6;
+    border: none;
+    height: 150px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    font-size: 30px;
+}
+.btn-both:active {
+    transform: translateY(-50%) scale(0.95);
 }
 .btn-left{
     content: "<";
+    left: 0;
 }
 .btn-right{
     content: ">";
+    right: 0;
 }
 .active2{
     color: white;
@@ -480,6 +496,7 @@ img{
 .team{
     width: 200px;
     height: auto;
+    position: absolute;
 }
 .team-cont{
     flex:1;
@@ -509,20 +526,20 @@ img{
     font-weight: normal;
 }
 #tom {
-    margin-top: 31%;
-    margin-left: 29%;
+    margin-top: 10%;
+    margin-left: 5%;
 }
 #sass {
-    margin-top: 27%;
-    margin-left: 34%;
+    margin-top: 10%;
+    margin-left: 60%;
 }
 #fara {
-    margin-top: 74%;
-    margin-left: 34%;
+    margin-top: 25%;
+    margin-left: 32%;
 }
 #mark {
-    margin-top: 87%;
-    margin-left: 25%;
+    margin-top: 15%;
+    margin-left: 80%;
 }
 
 /*____Footer____*/
@@ -708,24 +725,38 @@ button.soc-link:not(:hover) {
         padding: 10px 20px;
         font-size: 60px;
     }
-    /*
-    #nav-1{
-        z-index: 6;
+    .text-about{
+        width: 60%;
+        margin: auto auto;
     }
-    #nav-2{
-        transform: translateY(-110px);
-        z-index: 5;
+    .about img {
+        object-fit: scale-down;
+        width: 80%;
+        margin: 11% auto;
     }
-    #nav-3{
-        transform: translateY(-220px);
-        z-index: 4;
+    .about-con{
+        flex-direction: column;
     }
-    #nav-4{
-        transform: translateY(-330px);
-        z-index: 3;
+    .two-ways-sub{
+        flex-direction: column;
     }
-    #nav-5{
-        transform: translateY(-440px);
-        z-index: 2;
-    }*/
+    .slider-con{
+        display: none;
+    }
+    #tom {
+        margin-top: 28vh;
+        margin-left: 25%;
+    }
+    #fara {
+        margin-top: 21vh;
+        margin-left: 62%;
+    }
+    #sass {
+        margin-top: 67vh;
+        margin-left: 25%;
+    }
+    #mark {
+        margin-top: 61vh;
+        margin-left: 65%;
+    }
 }
