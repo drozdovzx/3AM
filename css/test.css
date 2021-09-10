@@ -651,6 +651,9 @@ button.soc-link:not(:hover) {
 
 
 @media only screen and (max-width: 1080px) {
+    html{
+        scroll-snap-type: none;
+    }
     .lang-change {
         display: none;
     }
@@ -758,5 +761,8 @@ button.soc-link:not(:hover) {
     #mark {
         margin-top: 61vh;
         margin-left: 65%;
+    }
+    @viewport {
+        user-zoom: fixed;
     }
 }
