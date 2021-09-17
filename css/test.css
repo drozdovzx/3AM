@@ -651,6 +651,30 @@ button.soc-link:not(:hover) {
 
 
 @media only screen and (max-width: 1080px) {
+
+    .about, .contact, .two-ways, .tam, .footer{
+        position: absolute !important;
+        top: 100vh;
+    }
+    .intro{
+        z-index: 11;
+    }
+    .about{
+        z-index: 10;
+    }
+    .contact{
+        z-index: 9;
+    }
+    .two-ways{
+        z-index: 8;
+    }
+    .tam{
+        z-index: 7;
+    }
+    .footer{
+        z-index: 6;
+    }
+
     html{
         scroll-snap-type: none;
     }
@@ -762,6 +786,7 @@ button.soc-link:not(:hover) {
         margin-top: 61vh;
         margin-left: 65%;
     }
+
     @viewport {
         user-zoom: fixed;
     }

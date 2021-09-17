@@ -1,6 +1,40 @@
+
 $(window).on("load", function (){
-    $(".preloader").fadeOut(500)
+    $(".preloader").fadeOut(500);
 });
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchmove', handleTouchMove, false);
+let y1 = null;
+let y2 = null;
+
+function handleTouchStart(event){
+    const firstTouch = event.touches[0];
+    y1 = firstTouch.clientY;
+    console.log(y1);
+    console.log("__1___");
+}
+function handleTouchMove(event){
+    y2 = event.touches[0].clientY;
+    let yDiff = Math.trunc(y1 - y2) + 'px';
+    let c = 0;
+    let el = document.getElementsByClassName("mob-el")[c];
+    let a = getComputedStyle(el,null).getPropertyValue("top");
+    console.log("a = " + a);
+    console.log("yDiff = " + yDiff);
+    console.log("_____");
+
+    if (a > 0){
+        el.style.top = "calc(" + a + " - " + yDiff/2 + "px)";
+        console.log(el.style.top);
+        y1 = event.touches[0].clientY;
+        console.log("__4___");
+    }
+    else {
+        c += 1;
+    }
+
+}
+
 $(document).ready(function() {
     setInterval(window.onload = function(){
         let way1 = document.getElementById("way1-1");
@@ -144,108 +178,3 @@ function menuStrips() {
         checkMenu = true;
     }
 }
-
-/*
-window.onscroll = function(ev) {
-    var navmain = document.getElementById("myHeader");
-    if (window.scrollY > 30) {
-            navmain.style.height = "10%";
-    }
-    else{
-        navmain.style.height = "15%";
-    }
-}
-*/
-
-/*
-function changeNavColor(a, b, c, d, e){
-    Array.from(a).forEach(
-        function(element, index, array  ) {
-            element.style.color="b"
-            e.style.height = "c";
-        }
-    );
-    Array.from(d).forEach(
-        function(element, index, array  ) {
-            element.style.fill="white";
-        }
-    );
-}
-window.onscroll = function(ev) {
-    var nav = document.getElementsByClassName("nav-link");
-    var el1 = document.getElementById("sec-one");
-    var el2 = document.getElementById("sec-two");
-    var el3 = document.getElementById("sec-three");
-    var el4 = document.getElementById("sec-four");
-    var el5 = document.getElementById("sec-five");
-    var navmain = document.getElementById("myHeader");
-    var logo = document.getElementsByClassName("col-chng");
-
-    if (window.scrollY >= el1.offsetTop) {
-        Array.from(nav).forEach(
-            function(element, index, array  ) {
-                element.style.color="white"
-                navmain.style.height = "15%";
-            }
-        );
-        Array.from(logo).forEach(
-            function(element, index, array  ) {
-                element.style.fill="white";
-            }
-        );
-    }
-    if (window.scrollY >= el2.offsetTop) {
-        Array.from(nav).forEach(
-            function(element, index, array  ) {
-                element.style.color="#b87709";
-                navmain.style.height = "10%";
-            }
-        );
-        Array.from(logo).forEach(
-            function(element, index, array  ) {
-                element.style.fill="#b87709";
-            }
-        );
-    }
-    if (window.scrollY >= el3.offsetTop) {
-        Array.from(nav).forEach(
-            function(element, index, array  ) {
-                element.style.color="white";
-                navmain.style.height = "10%";
-            }
-        );
-        Array.from(logo).forEach(
-            function(element, index, array  ) {
-                element.style.fill="white";
-            }
-        );
-    }
-    if (window.scrollY >= el4.offsetTop) {
-        Array.from(nav).forEach(
-            function(element, index, array  ) {
-                element.style.color="#b87709";
-                navmain.style.height = "10%";
-            }
-        );
-        Array.from(logo).forEach(
-            function(element, index, array  ) {
-                element.style.fill="#b87709";
-            }
-        );
-    }
-    if (window.scrollY >= el5.offsetTop) {
-        Array.from(nav).forEach(
-            function(element, index, array  ) {
-                element.style.color="#b87709";
-                navmain.style.height = "10%";
-            }
-        );
-        Array.from(logo).forEach(
-            function(element, index, array  ) {
-                element.style.fill="#b87709";
-            }
-        );
-    }
-
-};
-*/
