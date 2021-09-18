@@ -12,6 +12,27 @@ html{
 .col-chng{
     fill: black !important;
 }
+#topBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: fixed;
+    top: 0;
+    right: 15px;
+    z-index: 10000;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #8686869e;
+    color: white;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+#topBtn:hover {
+    background-color: #555;
+}
+
 
 .body{
     font-family: 'Montserrat', sans-serif;
@@ -118,8 +139,8 @@ html{
 }
 .current-lang {
     margin: auto;
-    height: auto;
-    width: 40px;
+    height: 50px;
+    width: 50px;
 }
 .current-lang svg{
     margin: 0;
@@ -374,13 +395,15 @@ img{
     background-color: #777777a1;
     color: #d6d6d6;
     border: none;
-    height: 150px;
-    width: 40px;
+    height: 80px;
+    width: 80px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 10000;
+    z-index: 20;
     font-size: 30px;
+    border-radius: 80px;
+    margin: 0 10px 0 10px;
 }
 .btn-both:active {
     transform: translateY(-50%) scale(0.95);

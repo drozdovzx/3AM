@@ -2,6 +2,17 @@
 $(window).on("load", function (){
     $(".preloader").fadeOut(500);
 });
+
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+    var myButton = document.getElementById("topBtn");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        myButton.style.top = "100px";
+    } else {
+        myButton.style.top = "0";
+    }
+}
+
 document.addEventListener('touchstart', handleTouchStart, false);
 document.addEventListener('touchmove', handleTouchMove, false);
 let y1 = null;
